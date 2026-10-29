@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mãos Solidárias — Ninguém deveria morar na rua</title>
+  <meta name="description" content="Ajude pessoas em situação de rua com PIX direto, doações de roupas, cobertas, camas e barracas, ou apoiando ONGs como a Cáritas Campinas.">
+  <meta name="theme-color" content="#FF2E93">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤲</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Marca que o JS está ativo antes da renderização (evita conteúdo invisível sem JS) -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <!-- Barra de progresso de rolagem -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="topo">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#inicio" class="logo">
+        <span class="logo__icon">🤲</span>
+        <span>Mãos<strong>Solidárias</strong></span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="menu">
+        <li><a href="#avistei">Avistei alguém</a></li>
+        <li><a href="#mural">Mural</a></li>
+        <li><a href="#numeros">A realidade</a></li>
+        <li><a href="#doacoes">Doações</a></li>
+        <li><a href="#ongs">ONGs</a></li>
+        <li><a href="#documentarios">Documentários</a></li>
+        <li><a href="#mural" class="btn btn--small btn--gradient">Doe agora</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="inicio">
+      <video class="hero__video" autoplay muted loop playsinline preload="auto"
+             poster="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1600&q=60">
+        <source src="https://videos.pexels.com/video-files/856973/856973-hd_1920_1080_25fps.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="blob blob--3"></div>
+
+      <div class="hero__content container">
+        <span class="pill reveal">💛 Mais de 327 mil brasileiros vivem nas ruas</span>
+        <h1 class="hero__title reveal">
+          Todo mundo merece<br>
+          <span class="typing" data-words='["um lar.", "um cobertor.", "um prato quente.", "ser visto.", "uma nova chance."]'></span><span class="cursor">|</span>
+        </h1>
+        <p class="hero__text reveal">
+          Conectamos você a quem precisa: PIX direto para moradores de rua,
+          doações de roupas, cobertas e barracas, e apoio às ONGs que fazem
+          a diferença todos os dias.
+        </p>
+        <div class="hero__ctas reveal">
+          <a href="#avistei" class="btn btn--gradient btn--glow">📍 Avistei alguém precisando</a>
+          <a href="#mural" class="btn btn--ghost">Ver o Mural da Esperança</a>
+        </div>
+      </div>
+
+      <a href="#avistei" class="scroll-down" aria-label="Rolar para baixo"><span></span></a>
+    </section>
+
+    <!-- ================= PAINEL: AVISTEI ALGUÉM ================= -->
+    <section class="avistei section" id="avistei">
+      <div class="blob blob--5"></div>
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Painel principal · leva 1 minuto</span>
+          <h2>Viu alguém no <span class="grad-text">semáforo, na praça, na calçada?</span></h2>
+          <p class="section__sub">
+            Conte onde e quando você encontrou a pessoa, envie uma foto e, se ela tiver,
+            a chave PIX. Voluntários e ONGs verificam cada envio antes de publicar no mural.
+          </p>
+        </header>
+
+        <div class="avistei__layout">
+          <!-- Coluna informativa -->
+          <aside class="avistei__aside reveal" aria-label="Como funciona">
+            <ol class="passos-info">
+              <li><span>📸</span><div><strong>Foto com respeito</strong><p>Peça permissão. Sem autorização, a foto é desfocada automaticamente.</p></div></li>
+              <li><span>📍</span><div><strong>Onde e quando</strong><p>Use o GPS: preenchemos o endereço e mostramos o mapa.</p></div></li>
+              <li><span>💬</span><div><strong>Nome, roupas, história</strong><p>Detalhes ajudam a equipe de abordagem a encontrar a pessoa.</p></div></li>
+              <li><span>💸</span><div><strong>PIX ou ONG</strong><p>Se a pessoa não tiver PIX, as doações vão para uma ONG parceira.</p></div></li>
+            </ol>
+
+            <div class="emergencia">
+              <strong>🚨 Emergência agora?</strong>
+              <p>Pessoa ferida, desmaiada ou em risco: ligue antes de preencher.</p>
+              <div class="emergencia__nums">
+                <a href="tel:192"><b>192</b> SAMU</a>
+                <a href="tel:190"><b>190</b> Polícia</a>
+                <a href="tel:156"><b>156</b> Abordagem social*</a>
+              </div>
+              <small>*Disponível em várias capitais, como São Paulo.</small>
+            </div>
+
+            <p class="nota-prototipo">Protótipo: os envios ficam salvos somente neste navegador.</p>
+          </aside>
+
+          <!-- Formulário em passos -->
+          <form id="form-avistei" class="wizard reveal" novalidate>
+            <div class="wizard__progress" aria-hidden="true"><span class="wizard__bar"></span></div>
+            <ol class="wizard__steps" aria-label="Etapas">
+              <li class="is-active"><span>1</span>Foto</li>
+              <li><span>2</span>Onde e quando</li>
+              <li><span>3</span>A pessoa</li>
+              <li><span>4</span>Como ajudar</li>
+            </ol>
+
+            <p class="draft-note" id="draft-note" hidden>💾 Recuperamos seu rascunho. <button type="button" id="btn-descartar">Descartar</button></p>
+
+            <!-- PASSO 1 -->
+            <fieldset class="wizard__panel is-active" data-step="1">
+              <legend class="sr-only">Passo 1: foto</legend>
+              <div class="field">
+                <span class="field-label" id="foto-label">Foto da pessoa (opcional)</span>
+                <div class="dropzone" data-dropzone>
+                  <input type="file" id="foto" name="foto" accept="image/*" class="sr-only" aria-labelledby="foto-label" aria-describedby="foto-erro">
+                  <label for="foto" class="dropzone__area">
+                    <span class="dropzone__icon">📷</span>
+                    <span class="dropzone__title">Arraste a foto aqui ou <u>toque para escolher</u></span>
+                    <span class="dropzone__hint">No celular, abre a câmera · JPG, PNG ou WEBP até 10 MB</span>
+                  </label>
+                  <div class="dropzone__preview">
+                    <img alt="Pré-visualização da foto">
+                    <div class="dropzone__bar">
+                      <span class="dropzone__filename"></span>
+                      <button type="button" class="dropzone__remove">Remover</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="field-error" id="foto-erro" aria-live="polite"></p>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" id="desfocar" name="desfocar" checked>
+                <span class="switch__track" aria-hidden="true"></span>
+                <span>Desfocar a foto (recomendado se a pessoa não autorizou)</span>
+              </label>
+            </fieldset>
+
+            <!-- PASSO 2 -->
+            <fieldset class="wizard__panel" data-step="2" hidden>
+              <legend class="sr-only">Passo 2: onde e quando</legend>
+              <div class="field">
+                <span class="field-label" id="tipo-local-label">Onde você viu a pessoa? <span class="req">*</span></span>
+                <div class="chips" id="chips-local" role="radiogroup" aria-labelledby="tipo-local-label"></div>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="local" class="field-label">Endereço ou ponto de referência <span class="req">*</span></label>
+                <div class="input-action">
+                  <input type="text" id="local" name="local" required minlength="5" maxlength="140"
+                         placeholder="Ex.: Semáforo da Av. Norte-Sul, em frente ao posto">
+                  <button type="button" class="btn-geo" id="btn-geo">📍 <span>Usar meu GPS</span></button>
+                </div>
+                <p class="field-status" id="geo-status" aria-live="polite"></p>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+
+              <div class="mini-mapa" id="mini-mapa" hidden>
+                <iframe title="Mapa do local informado" loading="lazy"></iframe>
+              </div>
+
+              <div class="form-row">
+                <div class="field">
+                  <label for="cidade" class="field-label">Cidade <span class="req">*</span></label>
+                  <input type="text" id="cidade" name="cidade" required minlength="2" maxlength="40" list="cidades-sugestoes" placeholder="Ex.: Campinas">
+                  <datalist id="cidades-sugestoes">
+                    <option value="Campinas"><option value="São Paulo"><option value="Rio de Janeiro">
+                    <option value="Belo Horizonte"><option value="Curitiba"><option value="Porto Alegre">
+                    <option value="Salvador"><option value="Recife"><option value="Fortaleza"><option value="Brasília">
+                  </datalist>
+                  <p class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                  <label for="datahora" class="field-label">Data e hora <span class="req">*</span></label>
+                  <input type="datetime-local" id="datahora" name="datahora" required data-max-message="A data não pode estar no futuro.">
+                  <div class="quick-time">
+                    <button type="button" data-minutos="0">Agora</button>
+                    <button type="button" data-minutos="60">Há 1 h</button>
+                    <button type="button" data-minutos="180">Há 3 h</button>
+                  </div>
+                  <p class="field-error" aria-live="polite"></p>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- PASSO 3 -->
+            <fieldset class="wizard__panel" data-step="3" hidden>
+              <legend class="sr-only">Passo 3: a pessoa</legend>
+              <div class="form-row">
+                <div class="field">
+                  <label for="nome" class="field-label">Nome ou apelido</label>
+                  <input type="text" id="nome" name="nome" maxlength="40" placeholder="Se ela quiser dizer">
+                </div>
+                <div class="field">
+                  <label for="faixa" class="field-label">Idade aproximada <span class="req">*</span></label>
+                  <select id="faixa" name="faixa" required></select>
+                  <p class="field-error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="aparencia" class="field-label">Aparência e roupas</label>
+                <input type="text" id="aparencia" name="aparencia" maxlength="120" placeholder="Ex.: homem de barba grisalha, blusa vermelha, com um cachorro">
+              </div>
+
+              <div class="field">
+                <label for="historia" class="field-label">Um pouco da história <span class="req">*</span></label>
+                <textarea id="historia" name="historia" rows="4" required minlength="15" maxlength="400"
+                          placeholder="O que ela contou? Como está? Há quanto tempo está na rua?"></textarea>
+                <div class="field-foot">
+                  <p class="field-error" aria-live="polite"></p>
+                  <span class="char-counter" id="historia-contador">0/400</span>
+                </div>
+              </div>
+
+              <div class="smart-alert" id="alerta-urgencia" hidden role="alert">
+                <strong>🚑 Parece uma emergência.</strong> Se a pessoa está ferida ou não responde, ligue
+                <a href="tel:192">192 (SAMU)</a> agora. Marcamos a urgência como alta.
+              </div>
+              <div class="smart-alert smart-alert--menor" id="alerta-menor" hidden role="alert">
+                <strong>🧒 Criança ou adolescente?</strong> Não publique foto. Acione o
+                <strong>Conselho Tutelar</strong> ou ligue <a href="tel:190">190</a> / Disque <a href="tel:100">100</a>.
+              </div>
+
+              <div class="field">
+                <span class="field-label" id="necessidades-label">Do que a pessoa mais precisa?</span>
+                <div class="chips chips--multi" id="chips-necessidades" role="group" aria-labelledby="necessidades-label"></div>
+              </div>
+
+              <div class="field">
+                <span class="field-label" id="urgencia-label">Urgência <span class="req">*</span></span>
+                <div class="segmented" role="radiogroup" aria-labelledby="urgencia-label">
+                  <label class="segment segment--baixa"><input type="radio" name="urgencia" value="baixa" required><span>Baixa</span></label>
+                  <label class="segment segment--media"><input type="radio" name="urgencia" value="media"><span>Média</span></label>
+                  <label class="segment segment--alta"><input type="radio" name="urgencia" value="alta"><span>Alta</span></label>
+                </div>
+                <p class="field-hint">Alta = doente, ferida, idosa no frio ou com criança.</p>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+            </fieldset>
+
+            <!-- PASSO 4 -->
+            <fieldset class="wizard__panel" data-step="4" hidden>
+              <legend class="sr-only">Passo 4: como ajudar</legend>
+              <div class="field">
+                <label for="pix" class="field-label">Chave PIX da própria pessoa (se ela tiver)</label>
+                <div class="pix-input">
+                  <input type="text" id="pix" name="pix" maxlength="77" autocomplete="off" placeholder="CPF, telefone, e-mail ou chave aleatória">
+                  <span class="pix-tipo" id="pix-tipo" aria-live="polite"></span>
+                </div>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+
+              <div class="field" id="campo-ong">
+                <label for="ong" class="field-label">Sem PIX? Doações irão para a ONG:</label>
+                <select id="ong" name="ong"></select>
+              </div>
+
+              <details class="opcional">
+                <summary>Deixar seu contato (opcional)</summary>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="contato-nome" class="field-label">Seu nome</label>
+                    <input type="text" id="contato-nome" name="contatoNome" autocomplete="name">
+                  </div>
+                  <div class="field">
+                    <label for="contato-tel" class="field-label">WhatsApp</label>
+                    <input type="tel" id="contato-tel" name="contatoTel" autocomplete="tel" inputmode="numeric"
+                           placeholder="(19) 99999-9999" data-phone-mask pattern="^\(\d{2}\) \d{4,5}-\d{4}$"
+                           data-pattern-message="Informe um telefone completo com DDD.">
+                    <p class="field-error" aria-live="polite"></p>
+                  </div>
+                </div>
+              </details>
+
+              <div class="revisao" id="revisao" aria-live="polite"></div>
+
+              <div class="field">
+                <label class="check">
+                  <input type="checkbox" id="consentimento" name="consentimento" required>
+                  <span id="consentimento-texto">Confirmo que as informações são verdadeiras.</span>
+                </label>
+                <p class="field-error" aria-live="polite"></p>
+              </div>
+            </fieldset>
+
+            <div class="wizard__nav">
+              <button type="button" class="btn btn--ghost-dark" id="btn-voltar" hidden>← Voltar</button>
+              <button type="button" class="btn btn--gradient" id="btn-avancar">Continuar →</button>
+              <button type="submit" class="btn btn--gradient btn--glow btn-submit" id="btn-enviar" hidden>
+                <span class="btn-label">Enviar para o mural</span><span class="spinner" aria-hidden="true"></span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NÚMEROS ================= -->
+    <section class="numeros section" id="numeros">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">A realidade</span>
+          <h2>Números que <span class="grad-text">não podem ser ignorados</span></h2>
+        </header>
+
+        <div class="stats">
+          <article class="stat reveal" style="--c: var(--magenta)">
+            <span class="stat__num" data-count="327925">0</span>
+            <p>pessoas em situação de rua no Brasil no fim de 2024</p>
+          </article>
+          <article class="stat reveal" style="--c: var(--laranja)">
+            <span class="stat__num" data-count="25" data-prefix="+" data-suffix="%">0</span>
+            <p>de aumento em apenas um ano (261 mil → 327 mil)</p>
+          </article>
+          <article class="stat reveal" style="--c: var(--turquesa)">
+            <span class="stat__num" data-count="68" data-suffix="%">0</span>
+            <p>são pessoas negras</p>
+          </article>
+          <article class="stat reveal" style="--c: var(--roxo)">
+            <span class="stat__num" data-count="87" data-suffix="%">0</span>
+            <p>são homens, a maioria adultos</p>
+          </article>
+        </div>
+        <p class="fonte reveal">
+          Fontes: <a href="https://obpoprua.direito.ufmg.br" target="_blank" rel="noopener">OBPopRua/UFMG</a> e
+          <a href="https://www.gov.br/mdh/pt-br/navegue-por-temas/populacao-em-situacao-de-rua" target="_blank" rel="noopener">Ministério dos Direitos Humanos e da Cidadania</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= COMO AJUDAR ================= -->
+    <section class="ajudar section section--light" id="como-ajudar">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Três jeitos de ajudar</span>
+          <h2>Escolha como você quer <span class="grad-text">fazer a diferença</span></h2>
+        </header>
+
+        <div class="ajudar__grid">
+          <a href="#mural" class="ajudar__card reveal" style="--c1: var(--magenta); --c2: var(--laranja)">
+            <span class="ajudar__icon bounce">💸</span>
+            <h3>PIX direto</h3>
+            <p>Envie qualquer valor diretamente para quem está no Mural — ou para a ONG que acompanha a pessoa.</p>
+            <span class="ajudar__link">Ir para o mural →</span>
+          </a>
+          <a href="#doacoes" class="ajudar__card reveal" style="--c1: var(--turquesa); --c2: var(--azul)">
+            <span class="ajudar__icon bounce" style="animation-delay:.3s">📦</span>
+            <h3>Doe itens</h3>
+            <p>Roupas, sapatos, cobertas, camas, barracas e kits de higiene. Veja o que mais falta agora.</p>
+            <span class="ajudar__link">Ver necessidades →</span>
+          </a>
+          <a href="#ongs" class="ajudar__card reveal" style="--c1: var(--roxo); --c2: var(--magenta)">
+            <span class="ajudar__icon bounce" style="animation-delay:.6s">🙌</span>
+            <h3>Seja voluntário</h3>
+            <p>Doe seu tempo: distribuição de refeições, triagem de roupas, cortes de cabelo, escuta.</p>
+            <span class="ajudar__link">Conhecer ONGs →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MURAL ================= -->
+    <section class="mural section" id="mural">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Mural da Esperança</span>
+          <h2>Conheça quem <span class="grad-text">está na rua</span> — e ajude direto</h2>
+          <p class="section__sub">
+            Cada pessoa tem nome, história e sonhos. Quem tem chave PIX recebe direto;
+            quem não tem é acompanhado por uma ONG parceira.
+          </p>
+        </header>
+
+        <div class="mural__toolbar reveal">
+          <ul class="mural__stats" aria-label="Resumo do mural">
+            <li><strong data-stat="total">0</strong> pessoas</li>
+            <li><strong data-stat="pix">0</strong> com PIX</li>
+            <li><strong data-stat="urgentes">0</strong> urgentes</li>
+          </ul>
+          <div class="filtros" role="group" aria-label="Filtrar o mural">
+            <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filtro" data-filtro="pix" aria-pressed="false">💸 Com PIX</button>
+            <button type="button" class="filtro" data-filtro="ong" aria-pressed="false">🤝 Via ONG</button>
+            <button type="button" class="filtro" data-filtro="urgentes" aria-pressed="false">🚨 Urgentes</button>
+            <button type="button" class="filtro" data-filtro="recentes" aria-pressed="false">🕒 Últimas 24 h</button>
+          </div>
+          <a href="#avistei" class="btn btn--gradient">+ Avistei alguém</a>
+        </div>
+
+        <div class="mural__grid" id="mural-grid" aria-live="polite"></div>
+        <p class="mural__vazio" id="mural-vazio" hidden>Nenhuma pessoa neste filtro ainda. 💛</p>
+
+        <p class="aviso reveal">
+          🔒 Cards marcados como <strong>“Perfil de exemplo”</strong> são ilustrativos, com PIX fictícios. Envios reais
+          aparecem como <strong>“Aguardando verificação”</strong> e só são publicados com autorização da pessoa retratada.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CARROSSEL DE DOAÇÕES ================= -->
+    <section class="doacoes section section--dark" id="doacoes">
+      <div class="blob blob--4"></div>
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow eyebrow--light">Doações de itens</span>
+          <h2>O que <span class="grad-text">mais falta</span> nas ruas</h2>
+          <p class="section__sub">Clique em um card para ver o que doar. Arraste para os lados para navegar.</p>
+        </header>
+
+        <div class="carousel reveal" aria-roledescription="carrossel" aria-label="Itens para doação">
+          <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+          <div class="carousel__viewport">
+            <div class="carousel__track" id="carousel-track"></div>
+          </div>
+          <button class="carousel__btn carousel__btn--next" aria-label="Próximo">›</button>
+          <div class="carousel__dots" role="tablist" aria-label="Escolher slide"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALERIA EM MOVIMENTO ================= -->
+    <section class="galeria" aria-label="Galeria de fotos">
+      <div class="marquee">
+        <div class="marquee__track" id="marquee-track"></div>
+      </div>
+      <div class="marquee marquee--reverse">
+        <div class="marquee__track marquee__track--words">
+          <span>DIGNIDADE</span><span>✦</span><span>MORADIA</span><span>✦</span><span>COMIDA</span><span>✦</span>
+          <span>RESPEITO</span><span>✦</span><span>EMPREGO</span><span>✦</span><span>AFETO</span><span>✦</span>
+          <span>DIGNIDADE</span><span>✦</span><span>MORADIA</span><span>✦</span><span>COMIDA</span><span>✦</span>
+          <span>RESPEITO</span><span>✦</span><span>EMPREGO</span><span>✦</span><span>AFETO</span><span>✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ONGS ================= -->
+    <section class="ongs section section--light" id="ongs">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow">Quem faz acontecer</span>
+          <h2>ONGs e iniciativas <span class="grad-text">para apoiar</span></h2>
+        </header>
+        <div class="ongs__grid" id="ongs-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= HISTÓRIA / IMAGEM ANIMADA ================= -->
+    <section class="destaque section">
+      <div class="container destaque__inner">
+        <div class="destaque__media reveal">
+          <img class="kenburns" src="https://images.unsplash.com/photo-1518398046578-8cca57782e17?auto=format&fit=crop&w=1000&q=70"
+               alt="Homem idoso sentado em uma estação segurando um cartaz que diz Seeking human kindness" loading="lazy">
+          <span class="destaque__tag">“Procurando gentileza humana”</span>
+        </div>
+        <div class="destaque__text reveal">
+          <span class="eyebrow">Aporofobia tem nome</span>
+          <h2>A rua não é uma escolha. <br><span class="grad-text">A indiferença é!</span></h2>
+          <p>
+            Aporofobia é a aversão aos pobres. Ela aparece em bancos com pinos, em olhares
+            desviados e em políticas que escondem em vez de acolher. Combatê-la começa com
+            um gesto simples: enxergar a pessoa.
+          </p>
+          <ul class="checklist">
+            <li>Cumprimente, pergunte o nome, escute.</li>
+            <li>Pergunte do que a pessoa precisa antes de doar.</li>
+            <li>Divulgue serviços: CREAS, Centros POP e abrigos.</li>
+            <li>Ligue <strong>156</strong> (em muitas cidades) para abordagem social.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOCUMENTÁRIOS ================= -->
+    <section class="docs section section--dark" id="documentarios">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="eyebrow eyebrow--light">Para assistir e refletir</span>
+          <h2>Documentários e <span class="grad-text">leituras</span></h2>
+        </header>
+        <div class="docs__grid" id="docs-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= CTA FINAL ================= -->
+    <section class="cta section">
+      <div class="container cta__box reveal">
+        <h2>Receba alertas de campanhas<br>de inverno e mutirões</h2>
+        <p>Uma mensagem por mês. Sem spam, só oportunidades de ajudar.</p>
+        <form class="cta__form" id="newsletter-form" novalidate>
+          <label for="news-email" class="sr-only">Seu e-mail</label>
+          <input type="email" id="news-email" placeholder="seu@email.com" required>
+          <button type="submit" class="btn btn--dark">Quero ajudar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <a href="#inicio" class="logo logo--light"><span class="logo__icon">🤲</span><span>Mãos<strong>Solidárias</strong></span></a>
+        <p>Uma ponte entre quem quer ajudar e quem precisa. Projeto independente, sem fins lucrativos.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#mural">Mural da Esperança</a></li>
+          <li><a href="#doacoes">Doações de itens</a></li>
+          <li><a href="#ongs">ONGs parceiras</a></li>
+          <li><a href="#documentarios">Documentários</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacidade e dignidade</h4>
+        <p>
+          Seguimos a LGPD: fotos e dados só são publicados com consentimento da pessoa
+          retratada. Para remover um perfil, fale com a ONG responsável.
+        </p>
+      </div>
+    </div>
+    <p class="footer__copy">Feito com 💛 por quem acredita que ninguém deveria morar na rua.</p>
+  </footer>
+
+  <!-- ================= DIALOG: DETALHES DO MURAL ================= -->
+  <dialog class="detalhe" id="detalhe" aria-labelledby="detalhe-titulo">
+    <button type="button" class="detalhe__fechar" aria-label="Fechar">×</button>
+    <div class="detalhe__media"></div>
+    <div class="detalhe__corpo">
+      <div class="detalhe__badges"></div>
+      <h3 id="detalhe-titulo"></h3>
+      <p class="detalhe__historia"></p>
+      <dl class="detalhe__info"></dl>
+      <div class="detalhe__acoes"></div>
+    </div>
+  </dialog>
+
+  <button type="button" class="topo" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Toasts -->
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
